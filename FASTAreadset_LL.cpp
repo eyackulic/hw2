@@ -65,15 +65,16 @@ void FASTAreadset_LL::print_last() {
 
 
 FASTAreadset_LL::~FASTAreadset_LL() {
-    if (first == nullptr) {
-        cout << "destructor: empty list" << endl;
-    } else {
-        Node *current_ptr = first;
+	if (first == nullptr) {
+		cout << "destructor: empty list" << endl;
+	} else {
+		Node *current_ptr = first;
+		Node *next_ptr = first->next;
 
-        while (current_ptr->next != nullptr) {
-            delete current_ptr;
-            current_ptr = current_ptr->next;
-        }
-        delete current_ptr;
-    }
-}
+		while (next_ptr != last) {
+			next_ptr = current_ptr->next;
+			delete current_ptr;
+			current_ptr = next_ptr;
+		}
+		delete last;
+	}
