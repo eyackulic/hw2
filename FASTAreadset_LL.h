@@ -23,6 +23,7 @@ Node *last = nullptr;
 
 char *genome_array;
 char **new_seq;
+
 // CHASE // add destructors for ^^ arrays?
 
 

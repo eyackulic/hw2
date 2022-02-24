@@ -180,14 +180,13 @@ void FASTAreadset_LL::printSequences() {
 Node * FASTAreadset_LL::searchNode(const char *input) {
 //takes a 51 character array input of A,C,T,G
 //returns match where found in instance
-    int matches = 0;
     if (first == nullptr) {
         cout << "cannot search empty list" << endl;
         return nullptr;
     } else {
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
-            if (isEqual(current_ptr->sequence, input) == true) { ;
+            if (isEqual(current_ptr->sequence, input) == true) {
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
                 return current_ptr;
             } else {
@@ -202,12 +201,10 @@ Node * FASTAreadset_LL::searchNode(const char *input) {
 void FASTAreadset_LL::abridgedSearch(const char * input){
     if (first == nullptr) {
         cout << "cannot search empty list" <<endl;
-
     } else{
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input)==true) { ;
-
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
                 cout << "match sequence is: " << current_ptr->sequence <<endl;
                 matches +=1;
