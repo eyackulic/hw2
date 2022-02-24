@@ -185,8 +185,7 @@ void FASTAreadset_LL::searchNode(const char *input) {
         }
         if (matches == 0) {
             cout << "No matches found" << endl;
-            // cout << nullptr << endl;
-            //**CHASE? //
+             cout << nullptr << endl;
         }else if (matches == 1){
             cout << matches <<" match found" << endl;
         }else{

@@ -55,7 +55,7 @@ public:
 
     //searches
     void largeSearch();
-    void searchNode(const char * input);
+    Node * searchNode(const char * input);
     void abridgedSearch(const char * input);
 
 };

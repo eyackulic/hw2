@@ -9,8 +9,6 @@ int main(){
 
     //Questions for Chase
  // how to format and run in monsoon?
- // how to return null pointer (Question A)
- // am I returning correct pointer for hits?
  // do I need to add additional destructors for question B?
 
  //Question A
@@ -38,18 +36,17 @@ const char * seq1; const char * seq2; const char * seq3; const char * seq4; cons
    linked_list.searchNode(seq);
 
 // Question B
-   const char *test;
-   test = "/Users/ethanyackulic/CLionProjects/INF504/hw2/test_genome.fasta";
-   linked_list.singleArray(test);
-   linked_list.getSequences();
+
+        linked_list.singleArray(argv[3]);
+        linked_list.getSequences();
 
 // OPTIONAL: view single area
 //   linked_list.printSingleArray();
 
 // OPTIONAL: view sequences
 // linked_list.printSequences();
-cout << "large results: " << endl;
- linked_list.largeSearch();
-
+        cout << "large results: " << endl;
+        linked_list.largeSearch();
+    }
     return 0;
 }
