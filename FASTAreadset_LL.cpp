@@ -4,6 +4,7 @@
 
 #include "FASTAreadset_LL.h"
 #include <fstream>
+#include <cstring>
 using namespace std;
 //constructor
 FASTAreadset_LL::FASTAreadset_LL() {
