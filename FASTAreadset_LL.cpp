@@ -194,6 +194,7 @@ Node * FASTAreadset_LL::searchNode(const char *input) {
                 current_ptr = current_ptr->next;
             }
         }
+        return nullptr;
     }
 }
 
