@@ -32,18 +32,19 @@ int main(int argc, char ** argv){
      seq4 = "CGTTGGGAGTGCTTGGTTTAGCGCAAATGAGTTTTCGAGGCTATCAAAAA";
      seq5 = "ACTGTAGAAGAAAAAAGTGAGGCTGCTCTTTTACAAGAAAAAGTNNNNNN";
 
-     Node * result_node;
-     result_node = linked_list.searchNode(seq1);
-     if(result_node != nullptr) {
-         cout << "Match found! Sequence: " << result_node->sequence << endl;
-     }else{
-         cout << "Not Match Found :(" << endl;
-     }
+//     Node * result_node;
+//     result_node = linked_list.searchNode(seq1);
+//     if(result_node != nullptr) {
+//         cout << "Match found! Sequence: " << result_node->sequence << endl;
+//     }else{
+//         cout << "Not Match Found :(" << endl;
+//     }
 
-//     linked_list.searchNode(seq2);
-//     linked_list.searchNode(seq3);
-//     linked_list.searchNode(seq4);
-//     linked_list.searchNode(seq5);
+
+     linked_list.searchNode(seq2);
+     linked_list.searchNode(seq3);
+     linked_list.searchNode(seq4);
+     linked_list.searchNode(seq5);
 
      //*known example*
 //     cout << "known example" << endl;
