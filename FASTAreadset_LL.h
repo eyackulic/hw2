@@ -10,7 +10,7 @@
 using namespace std;
 struct Node{
    const char * sequence;
-   Node * next;
+   Node * next = nullptr;
 };
 
 
@@ -21,22 +21,42 @@ private:
 Node *first = nullptr;
 Node *last = nullptr;
 
+char *genome_array;
+char **new_seq;
+// CHASE // add destructors for ^^ arrays?
+
+
+int genome_index;
+int line;
+int matches;
 
 public:
 //default constructor;
     FASTAreadset_LL();
 
 // custom constructor;
+   FASTAreadset_LL(const char *filename);
 
 //destructor
    ~FASTAreadset_LL ();
 
-//print function
+  //class methods
+    void addNode(const char *input_seq);
+    bool isEqual(const char * seq1, const char * seq2);
+    void singleArray(const char *filename); // build array
+    void getSequences(); // grab all sequences
 
-    void addNode(const char *);
+    //print function
     void printLL();
     void print_first();
     void print_last();
+    void printArray();
+    void printSequences();
+
+    //searches
+    void largeSearch();
+    void searchNode(const char * input);
+    void abridgedSearch(const char * input);
 
 };
 
