@@ -1,6 +1,7 @@
 #include <iostream>
 #include "FASTAreadset_LL.h"
 #include <cstring>
+#include <fstream>
 
 using namespace std;
 

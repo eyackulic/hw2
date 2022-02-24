@@ -4,8 +4,8 @@
 
 #ifndef HW2_FASTAREADSET_LL_H
 #define HW2_FASTAREADSET_LL_H
-
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 struct Node{

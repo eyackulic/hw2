@@ -4,7 +4,8 @@
 
 #include "FASTAreadset_LL.h"
 #include <fstream>
-#include <cstring>
+#include <iostream>
+
 using namespace std;
 //constructor
 FASTAreadset_LL::FASTAreadset_LL() {
@@ -181,25 +182,17 @@ Node * FASTAreadset_LL::searchNode(const char *input) {
 //returns match where found in instance
     int matches = 0;
     if (first == nullptr) {
-        cout << "cannot search empty list" <<endl;
+        cout << "cannot search empty list" << endl;
         return nullptr;
-    } else{
+    } else {
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
-            if (isEqual(current_ptr->sequence, input)==true) { ;
+            if (isEqual(current_ptr->sequence, input) == true) { ;
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
                 return current_ptr;
-            }else{
+            } else {
                 current_ptr = current_ptr->next;
             }
-        }
-        if (matches == 0) {
-            cout << "No matches found" << endl;
-             cout << nullptr << endl;
-        }else if (matches == 1){
-            cout << matches <<" match found" << endl;
-        }else{
-            cout << matches <<" total matches found" << endl;
         }
     }
 }
