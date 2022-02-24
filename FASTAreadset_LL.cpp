@@ -194,6 +194,7 @@ Node * FASTAreadset_LL::searchNode(const char *input) {
                 current_ptr = current_ptr->next;
             }
         }
+        cout << "No match found" << endl;
         return nullptr;
     }
 }
@@ -209,8 +210,8 @@ void FASTAreadset_LL::abridgedSearch(const char * input){
 
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
                 cout << "match sequence is: " << current_ptr->sequence <<endl;
-//                matches +=1;
-//                current_ptr = current_ptr->next;
+                matches +=1;
+                current_ptr = current_ptr->next;
 
             }else{
                 current_ptr = current_ptr->next;

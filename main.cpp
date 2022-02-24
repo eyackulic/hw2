@@ -46,10 +46,10 @@ int main(int argc, char ** argv){
      linked_list.searchNode(seq5);
 
      //*known example*
-     cout << "known example" << endl;
-     const char *seq;
-     seq = "ATATTCATTTTGAACCTATTCACATACTTTTTCACAAATCCTATATTTCC";
-     linked_list.searchNode(seq);
+//     cout << "known example" << endl;
+//     const char *seq;
+//     seq = "ATATTCATTTTGAACCTATTCACATACTTTTTCACAAATCCTATATTTCC";
+//     linked_list.searchNode(seq);
  }
     if(strcmp(argv[1], "1b") == 0) {
         FASTAreadset_LL linked_list(argv[2]);
