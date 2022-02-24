@@ -41,6 +41,15 @@ FASTAreadset_LL::~FASTAreadset_LL() {
         }
         delete current_ptr;
     }
+
+    for(int i = 0; i < line; i++){
+        delete[] new_seq[i];
+    }
+
+    delete[] new_seq;
+    delete[] genome_array;
+
+
 }
 
 // functions
@@ -166,19 +175,19 @@ void FASTAreadset_LL::printSequences() {
 
 
 
-void FASTAreadset_LL::searchNode(const char *input) {
+Node * FASTAreadset_LL::searchNode(const char *input) {
 //takes a 51 character array input of A,C,T,G
 //returns match where found in instance
     int matches = 0;
     if (first == nullptr) {
         cout << "cannot search empty list" <<endl;
+        return nullptr;
     } else{
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input)==true) { ;
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
-                matches +=1;
-                current_ptr = current_ptr->next;
+                return current_ptr;
             }else{
                 current_ptr = current_ptr->next;
             }
@@ -197,14 +206,17 @@ void FASTAreadset_LL::searchNode(const char *input) {
 void FASTAreadset_LL::abridgedSearch(const char * input){
     if (first == nullptr) {
         cout << "cannot search empty list" <<endl;
+
     } else{
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input)==true) { ;
+
                 cout << "match found! Node location is: " << &current_ptr->sequence << endl;
                 cout << "match sequence is: " << current_ptr->sequence <<endl;
-                matches +=1;
-                current_ptr = current_ptr->next;
+//                matches +=1;
+//                current_ptr = current_ptr->next;
+
             }else{
                 current_ptr = current_ptr->next;
             }
