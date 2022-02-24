@@ -40,11 +40,11 @@ int main(int argc, char ** argv){
 //         cout << "Not Match Found :(" << endl;
 //     }
 
-     linked_list.searchNode(seq1);
-     linked_list.searchNode(seq2);
-     linked_list.searchNode(seq3);
-     linked_list.searchNode(seq4);
-     linked_list.searchNode(seq5);
+//     linked_list.searchNode(seq1);
+//     linked_list.searchNode(seq2);
+//     linked_list.searchNode(seq3);
+//     linked_list.searchNode(seq4);
+//     linked_list.searchNode(seq5);
 
      //*known example*
 //     cout << "known example" << endl;
