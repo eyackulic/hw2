@@ -45,7 +45,11 @@ int main(int argc, char ** argv){
      linked_list.searchNode(seq3);
      linked_list.searchNode(seq4);
      linked_list.searchNode(seq5);
-
+     delete [] seq1;
+     delete [] seq2;
+     delete [] seq3;
+     delete [] seq4;
+     delete [] seq5;
      //*known example*
 //     cout << "known example" << endl;
 //     const char *seq;
