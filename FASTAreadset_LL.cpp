@@ -21,6 +21,7 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
     char *temp_head;
     char *temp_read;
     genome_array = nullptr;
+    new_seq = new char *[1000];
     while (input.good()) {
         temp_head = new char[51];
         temp_read = new char[51];
