@@ -52,9 +52,10 @@ cout << "in destructor" << endl;
         delete[] new_seq[i];
     }
 
-    delete[] new_seq;
+
     cout << "in destructor3" << endl;
     delete[] genome_array;
+    delete[] new_seq;
 //    delete[] temp_head;
 //    delete[] temp_read;
     cout << "in destructor4" << endl;
