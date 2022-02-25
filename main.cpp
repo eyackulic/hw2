@@ -20,15 +20,15 @@ int main(int argc, char ** argv){
 //const char *argv;
 //argv = "/Users/ethanyackulic/CLionProjects/INF504/hw2/sample_hw_dataset.fa";
 cout << "update" << endl;
-//FASTAreadset_LL linked_list(argv[2]);
+FASTAreadset_LL linked_list(argv[2]);
      cout << "update" << endl;
- //    const char *seq1;
+     const char *seq1;
 //     const char *seq2;
 //     const char *seq3;
 //     const char *seq4;
 //     const char *seq5;
 //
-//     seq1 = "CTAGGTACATCCACACACAGCAGCGCATTATGTATTTATTGGATTTATTT";
+     seq1 = "CTAGGTACATCCACACACAGCAGCGCATTATGTATTTATTGGATTTATTT";
 //     seq2 = "GCGCGATCAGCTTCGCGCGCACCGCGAGCGCCGATTGCACGAAATGGCGC";
 //     seq3 = "CGATGATCAGGGGCGTTGCGTAATAGAAACTGCGAAGCCGCTCTATCGCC";
 //     seq4 = "CGTTGGGAGTGCTTGGTTTAGCGCAAATGAGTTTTCGAGGCTATCAAAAA";
