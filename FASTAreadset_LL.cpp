@@ -33,7 +33,7 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
 
 //destructor
 FASTAreadset_LL::~FASTAreadset_LL() {
-cout << "in destructor" << endl;
+
     if (first == nullptr) {
         cout << "destructor: empty list" << endl;
     } else {
@@ -53,15 +53,9 @@ cout << "in destructor" << endl;
         for (int i = 0; i < line; i++) {
             delete[] new_seq[i];
         }
-
-        cout << "in destructor2" << endl;
         delete[] genome_array;
-        cout << "in destructor3" << endl;
         delete[] new_seq;
     }
-//    delete[] temp_head;
-//    delete[] temp_read;
-    cout << "in destructor4" << endl;
 }
 
 // functions
