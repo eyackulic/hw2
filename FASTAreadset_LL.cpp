@@ -48,14 +48,17 @@ cout << "in destructor" << endl;
         delete last;
     }
 
-    for(int i = 0; i < line; i++){
-        delete[] new_seq[i];
-    }
 
-    cout << "in destructor2" << endl;
-    delete[] genome_array;
-    cout << "in destructor3" << endl;
-    delete[] new_seq;
+    if( genome_array != nullptr) {
+        for (int i = 0; i < line; i++) {
+            delete[] new_seq[i];
+        }
+
+        cout << "in destructor2" << endl;
+        delete[] genome_array;
+        cout << "in destructor3" << endl;
+        delete[] new_seq;
+    }
 //    delete[] temp_head;
 //    delete[] temp_read;
     cout << "in destructor4" << endl;
