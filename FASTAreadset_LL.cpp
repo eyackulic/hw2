@@ -18,9 +18,9 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
 
     ifstream input;        //create filestream to read the file
     input.open(filename);        //initialize the filestream by pointing it to the right file
-
     char *temp_head;
     char *temp_read;
+    genome_array = nullptr;
     while (input.good()) {
         temp_head = new char[51];
         temp_read = new char[51];
@@ -93,7 +93,7 @@ bool FASTAreadset_LL::isEqual(const char * seq1, const char * seq2) {
 
 void FASTAreadset_LL::singleArray(const char *filename) {
     ifstream input(filename);
-    genome_array = new char[5500000]; // should be big enough to hold it
+    genome_array = new char[6000000]; // should be big enough to hold it
     char *temp_buffer = new char[100];
     char current_char;
    genome_index = 0;
