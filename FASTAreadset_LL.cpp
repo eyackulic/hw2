@@ -32,7 +32,7 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
 
 //destructor
 FASTAreadset_LL::~FASTAreadset_LL() {
-
+cout << "in destructor" << endl;
     if (first == nullptr) {
         cout << "destructor: empty list" << endl;
     } else {
