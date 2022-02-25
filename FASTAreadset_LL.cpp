@@ -51,6 +51,7 @@ cout << "in destructor" << endl;
         delete[] new_seq[i];
     }
     cout << genome_array << endl;
+    cout << new_seq <<endl;
     delete[] genome_array;
     cout << "in destructor3" << endl;
     delete[] new_seq;
