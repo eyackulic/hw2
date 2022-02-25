@@ -19,29 +19,32 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
     ifstream input;        //create filestream to read the file
     input.open(filename);        //initialize the filestream by pointing it to the right file
 
-//    char *temp_head;
-//    char *temp_read;
-//    while (input.good()) {
-//        temp_head = new char[51];
-//        temp_read = new char[51];
-//        input >> temp_head;    //read in the header line
-//        input >> temp_read;
-//        addNode(temp_read);
-//    }
+    char *temp_head;
+    char *temp_read;
+    while (input.good()) {
+        temp_head = new char[51];
+        temp_read = new char[51];
+        input >> temp_head;    //read in the header line
+        input >> temp_read;
+        addNode(temp_read);
+    }
 }
 
 //destructor
 FASTAreadset_LL::~FASTAreadset_LL() {
+
     if (first == nullptr) {
         cout << "destructor: empty list" << endl;
     } else {
         Node *current_ptr = first;
+        Node *next_ptr = first->next;
 
-        while (current_ptr->next != nullptr) {
+        while (next_ptr != last) {
+            next_ptr = current_ptr->next;
             delete current_ptr;
-            current_ptr = current_ptr->next;
+            current_ptr = next_ptr;
         }
-        delete current_ptr;
+        delete last;
     }
 
     for(int i = 0; i < line; i++){
