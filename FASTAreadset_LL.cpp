@@ -19,15 +19,15 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
     ifstream input;        //create filestream to read the file
     input.open(filename);        //initialize the filestream by pointing it to the right file
 
-    char *temp_head;
-    char *temp_read;
-    while (input.good()) {
-        temp_head = new char[51];
-        temp_read = new char[51];
-        input >> temp_head;    //read in the header line
-        input >> temp_read;
-        addNode(temp_read);
-    }
+//    char *temp_head;
+//    char *temp_read;
+//    while (input.good()) {
+//        temp_head = new char[51];
+//        temp_read = new char[51];
+//        input >> temp_head;    //read in the header line
+//        input >> temp_read;
+//        addNode(temp_read);
+//    }
 }
 
 //destructor
