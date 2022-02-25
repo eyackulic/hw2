@@ -46,11 +46,11 @@ cout << "in destructor" << endl;
         }
         delete last;
     }
-
+    cout << "in destructor2" << endl;
     for(int i = 0; i < line; i++){
         delete[] new_seq[i];
     }
-
+    cout << "in destructor3" << endl;
     delete[] new_seq;
     delete[] genome_array;
 //    delete[] temp_head;
