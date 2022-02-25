@@ -50,9 +50,10 @@ cout << "in destructor" << endl;
     for(int i = 0; i < line; i++){
         delete[] new_seq[i];
     }
+    delete[] genome_array;
     cout << "in destructor3" << endl;
     delete[] new_seq;
-    delete[] genome_array;
+
 //    delete[] temp_head;
 //    delete[] temp_read;
     cout << "in destructor4" << endl;
