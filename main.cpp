@@ -41,7 +41,7 @@ FASTAreadset_LL linked_list(argv[2]);
      Node * result_node5;
     result_node = linked_list.searchNode(seq1);
      if(result_node != nullptr) {
-         cout << "Match found! Sequence: " << result_node1->sequence << endl;
+         cout << "Match found! Sequence: " << result_node->sequence << endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }
