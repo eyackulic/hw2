@@ -19,7 +19,8 @@ int main(int argc, char ** argv){
      //Question A
 //const char *argv;
 //argv = "/Users/ethanyackulic/CLionProjects/INF504/hw2/sample_hw_dataset.fa";
-     FASTAreadset_LL linked_list(argv[2]);
+cout << "update" << endl;
+FASTAreadset_LL linked_list(argv[2]);
  //    const char *seq1;
 //     const char *seq2;
 //     const char *seq3;
