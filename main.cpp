@@ -20,7 +20,8 @@ int main(int argc, char ** argv){
 //const char *argv;
 //argv = "/Users/ethanyackulic/CLionProjects/INF504/hw2/sample_hw_dataset.fa";
 cout << "update" << endl;
-FASTAreadset_LL linked_list(argv[2]);
+//FASTAreadset_LL linked_list(argv[2]);
+     cout << "update" << endl;
  //    const char *seq1;
 //     const char *seq2;
 //     const char *seq3;
