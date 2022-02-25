@@ -28,6 +28,8 @@ FASTAreadset_LL::FASTAreadset_LL(const char *filename) {
         input >> temp_read;
         addNode(temp_read);
     }
+    delete [] temp_read;
+    delete [] temp_head;
 }
 
 //destructor
