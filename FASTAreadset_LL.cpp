@@ -55,7 +55,7 @@ cout << "in destructor" << endl;
     delete[] genome_array;
 //    delete[] temp_head;
 //    delete[] temp_read;
-
+    cout << "in destructor4" << endl;
 }
 
 // functions
