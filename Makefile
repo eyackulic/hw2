@@ -6,7 +6,7 @@ main: main.o FASTAreadset_LL.o
 main.o: main.cpp
 	g++ -g -Wall -o main.o -c main.cpp
 
-FASTA_readset.o: FASTA_readset.cpp
+FASTA_readset_LL.o: FASTA_readset_LL.cpp
 	g++ -g -Wall -o FASTAreadset_LL.o -c FASTAreadset_LL.cpp
 
 clean:
