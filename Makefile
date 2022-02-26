@@ -1,7 +1,7 @@
 all: main
 
 main: main.o FASTAreadset_LL.o
-	g++ -g -Wall -o main  FASTAreadset_LL.o
+	g++ -g -Wall -o main  main.o FASTAreadset_LL.o
 
 main.o: main.cpp
 	g++ -g -Wall -o main.o -c main.cpp
