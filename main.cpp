@@ -40,30 +40,35 @@ FASTAreadset_LL linked_list(argv[2]);
     result_node = linked_list.searchNode(seq1);
      if(result_node != nullptr) {
          cout << "Match found! Sequence: " << result_node->sequence << endl;
+         cout << " Node location is: " << &result_node->sequence <<endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }
      result_node2 = linked_list.searchNode(seq2);
      if(result_node2 != nullptr) {
          cout << "Match found! Sequence: " << result_node2->sequence << endl;
+         cout << " Node location is: " << &result_node2->sequence <<endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }
      result_node3 = linked_list.searchNode(seq3);
      if(result_node3 != nullptr) {
          cout << "Match found! Sequence: " << result_node3->sequence << endl;
+         cout << " Node location is: " << &result_node3->sequence <<endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }
      result_node4 = linked_list.searchNode(seq4);
      if(result_node4 != nullptr) {
          cout << "Match found! Sequence: " << result_node4->sequence << endl;
+         cout << " Node location is: " << &result_node4->sequence <<endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }
      result_node5 = linked_list.searchNode(seq5);
      if(result_node5 != nullptr) {
          cout << "Match found! Sequence: " << result_node5->sequence << endl;
+         cout << " Node location is: " << &result_node5->sequence <<endl;
      }else{
          cout << "Not Match Found :(" << endl;
      }

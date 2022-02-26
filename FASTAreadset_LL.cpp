@@ -209,8 +209,8 @@ void FASTAreadset_LL::abridgedSearch(const char * input){
         Node *current_ptr = first;
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input)==true) { ;
-                cout << "match found! Node location is: " << &current_ptr->sequence << endl;
-                cout << "match sequence is: " << current_ptr->sequence <<endl;
+//                cout << "match found! Node location is: " << &current_ptr->sequence << endl;
+//                cout << "match sequence is: " << current_ptr->sequence <<endl;
                 matches +=1;
                 current_ptr = current_ptr->next;
 
