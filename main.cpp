@@ -113,7 +113,7 @@ FASTAreadset_LL linked_list(argv[2]);
 // OPTIONAL: view sequences
 // linked_list.printSequences();
         cout << "large results: " << endl;
-        linked_list.largeSearch(100000);
+        linked_list.largeSearch(10000);
     }
     return 0;
 }
