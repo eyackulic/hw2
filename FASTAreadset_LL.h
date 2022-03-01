@@ -54,13 +54,29 @@ public:
     void print_last();
     void printArray();
     void printSequences();
+    void printLineCount();
 
     //searches
-    void largeSearch();
+    void largeSearch(int line);
     Node * searchNode(const char * input);
     void abridgedSearch(const char * input);
+
+    const char * searchNode2(const char * input);
 
 };
 
 
+struct Timer{
+    time_t begin;
+    time_t end;
+
+    Timer(){
+        time(&begin);
+    }
+    ~Timer(){
+        time(&end);
+        cout << "time taken :" << end - begin << " full seconds" << endl;
+        // Timer time; at top of functions
+    }
+};
 #endif //HW2_FASTAREADSET_LL_H

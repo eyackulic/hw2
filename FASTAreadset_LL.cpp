@@ -131,6 +131,7 @@ void FASTAreadset_LL::getSequences() {
     }
 }
 
+
 void FASTAreadset_LL::printLL() {
 
     if (first != nullptr) {
@@ -168,7 +169,9 @@ void FASTAreadset_LL::printArray() {
         cout << genome_array << endl;
 }
 
-
+void FASTAreadset_LL::printLineCount() {
+    cout << "number of 50 character fragments is: " <<line << endl;
+}
 
 void FASTAreadset_LL::printSequences() {
     int i = 0;
@@ -184,6 +187,7 @@ void FASTAreadset_LL::printSequences() {
 Node * FASTAreadset_LL::searchNode(const char *input) {
 //takes a 51 character array input of A,C,T,G
 //returns match where found in instance
+   // int count = 0;
     if (first == nullptr) {
    //     cout << "cannot search empty list" << endl;
         return nullptr;
@@ -192,9 +196,12 @@ Node * FASTAreadset_LL::searchNode(const char *input) {
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input) == true) {
         //        cout << "match found! Node location is: " << &current_ptr->sequence << endl;
+        //       count++;
+        //       cout << "entry # is : " << count <<endl;
                 return current_ptr;
             } else {
                 current_ptr = current_ptr->next;
+        //        count ++;
             }
         }
    //     cout << "No match found" << endl;
@@ -210,7 +217,7 @@ void FASTAreadset_LL::abridgedSearch(const char * input){
         while (current_ptr->next != nullptr) {
             if (isEqual(current_ptr->sequence, input)==true) { ;
 //                cout << "match found! Node location is: " << &current_ptr->sequence << endl;
-//                cout << "match sequence is: " << current_ptr->sequence <<endl;
+                cout << "match sequence is: " << current_ptr->sequence <<endl;
                 matches +=1;
                 current_ptr = current_ptr->next;
 
@@ -221,13 +228,22 @@ void FASTAreadset_LL::abridgedSearch(const char * input){
     }
 }
 
-void FASTAreadset_LL::largeSearch() {
+void FASTAreadset_LL::largeSearch(int lines_to_read) {
    matches = 0;
-    for(int q = 0; q < line; q++) {
+   int num_read = 0;
+   Timer time;
+    if (lines_to_read == NULL){
+        num_read = line;
+    }else{
+        num_read = lines_to_read;
+    }
+
+    for(int q = 0; q < num_read; q++) {
         abridgedSearch(new_seq[q]);
     }
        if (matches == 0) {
            cout << "No matches found" << endl;
+           cout << num_read << endl;
            // cout << nullptr << endl;
        }else if (matches == 1){
            cout << matches <<" match found" << endl;
@@ -238,3 +254,27 @@ void FASTAreadset_LL::largeSearch() {
 cout << "search complete" << endl;
 }
 //
+const char * FASTAreadset_LL::searchNode2(const char *input) {
+//takes a 51 character array input of A,C,T,G
+//returns match where found in instance
+int count = 0;
+int h = 0;
+while (h < line){
+    const char * current;
+    current = new_seq[h];
+            if (isEqual(current, input) == true) {
+                //        cout << "match found! Node location is: " << &current_ptr->sequence << endl;
+                 count++;
+                 h++;
+                 cout << "entry # is : " << count <<endl;
+                 cout << "out of " << line << endl;
+                return current;
+            } else {
+                h++;
+                count ++;
+            }
+        }
+        //     cout << "No match found" << endl;
+        return nullptr;
+    }
+
